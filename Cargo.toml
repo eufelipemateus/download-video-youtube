@@ -7,10 +7,15 @@ authors = ["Felipe Mateus <eu@felipemateus.com>"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [lib]
-name = "mylib"
-path = "src/lib.rs"
-crate-type = ["dylib"] # could be `staticlib` as well
+name = "download_video_yt"
+path = "src/download.rs"
+crate-type = ["rlib","dylib"] # could be `staticlib` as well
 
 [dependencies]
+ffmpeg-next = "7.0.1"
 rustube = "0.6.0"
 tokio = "1.37.0"
+image = "0.23"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+log = "0.4.21"
