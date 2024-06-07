@@ -5,8 +5,6 @@ use std::os::raw::c_char;
 
 mod thumbnail;
 
-
-
 pub async fn download_video(url: &str, dest: &str) -> String {
 
     let metadata_dir_dest = fs::metadata(dest).unwrap();
